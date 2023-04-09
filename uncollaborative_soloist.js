@@ -54,6 +54,7 @@ myFilter.set(1500,0);
 
 var graphicsArray = []
 var textureImage
+var frameNumber
 
 
 // each note has a corresponding osc
@@ -100,13 +101,17 @@ function pageReload(){
     window.location.reload()
 }
 
-
+if (frameNumber%2000 ==0){
+    window.location.reload();
+    getAudioContext().resume();
+}
 
 // Draw function
 function getBaseLog(x, y) {
     return log(y) / log(x);
 }
 function draw(){
+    frameNumber =frameCount;
     cnv.position(windowWidth/2-canvasWidth/2,windowHeight/2-canvasWidth/2,"relative")
     background(0,0,0,100);
 
