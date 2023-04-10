@@ -23,7 +23,7 @@ function enableMidi(err) { //check if WebMidi.js is enabled
     }  
       
     //Choose an input port
-    midiIn = WebMidi.inputs[0];
+    midiIn = WebMidi.inputs[2];
   
     //listen to all incoming "note on" input events
     midiIn.addListener('midimessage',midiCallback);
