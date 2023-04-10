@@ -135,7 +135,7 @@ function draw(){
     }
 
     if(displayImage != 0){
-        console.log(displayImage)
+        //console.log(displayImage)
         image(displayImage,0,0)
     }
 
